@@ -1,0 +1,42 @@
+footer {
+	background-color: $azul;
+	padding-block: 40px;
+	a,
+	p,
+	h2 {
+		color: $branco;
+		margin: 0;
+	}
+	h2 {
+		font-size: rem(32);
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+	.footer-first-col-item {
+		display: flex;
+		height: 100px;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		gap: 30px;
+	}
+
+	.social {
+		display: flex;
+		gap: 30px;
+	}
+	.social-item {
+		height: 30px;
+		width: 30px;
+		font-size: 0px;
+		display: block;
+		background-color: $branco;
+	}
+}

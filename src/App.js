@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/css/main.css';
+
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Blog from './Components/Pages/Blog';
