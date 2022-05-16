@@ -46,7 +46,7 @@ $font2: 'Merriweather', serif;
 
 .container {
 	@include device(custom, 1500px) {
-		max-width: 1400px;
+		max-width: calc(1400px + 24px);
 	}
 }
 
@@ -76,4 +76,29 @@ a {
 img {
 	width: 100%;
 	display: block;
+}
+
+.img-wrapper {
+	background-image: linear-gradient(to bottom, #f7c659, $azul);
+}
+
+.main-title {
+	font-family: $font2;
+	color: $cinza-escuro;
+	font-size: rem(50);
+	position: relative;
+	display: inline-block;
+	margin-bottom: 55px;
+	line-height: 1.2;
+	width: fit-content;
+	z-index: 5;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		bottom: -7px;
+		height: 33px;
+		width: 100%;
+		background-color: $amarelo;
+	}
 }

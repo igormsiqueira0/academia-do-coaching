@@ -23,8 +23,27 @@ const Home = () => {
 		setXxlSize(window.innerWidth);
 	}, []);
 
+	React.useEffect(() => {
+		const content = document.querySelector('.hero--content');
+		const image = document.querySelector('.img-wrapper');
+
+		if (content) {
+			content.classList.remove('hero--content');
+			setTimeout(() => {
+				content.classList.add('hero--content');
+			});
+		}
+
+		if (image) {
+			image.classList.remove('img-wrapper');
+			setTimeout(() => {
+				image.classList.add('img-wrapper');
+			});
+		}
+	}, [heroSlide]);
+
 	return (
-		<div style={{ minHeight: '1100px' }}>
+		<div>
 			<Container className="hero">
 				<BtnGroup
 					setHeroSlide={setHeroSlide}
@@ -40,7 +59,7 @@ const Home = () => {
 				</div>
 
 				{xxlSize >= 1200 && (
-					<div className="hero-img-wrapper my-auto">
+					<div className="img-wrapper my-auto">
 						<img src={heroSlide.img && heroSlide.img} alt={heroSlide.btnText} />
 					</div>
 				)}

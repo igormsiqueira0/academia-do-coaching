@@ -42,7 +42,7 @@ const BtnGroup = ({ setHeroSlide, ...rest }) => {
 	}
 
 	const [state, dispatch] = React.useReducer(reducer, SLIDE_1_CONTENT);
-	function reducer(state, { type }) {
+	function reducer(slide, { type }) {
 		switch (type) {
 			case '1':
 				return SLIDE_1_CONTENT;

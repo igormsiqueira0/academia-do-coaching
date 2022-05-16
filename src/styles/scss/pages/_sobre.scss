@@ -1,0 +1,73 @@
+@use 'sass:math';
+
+.sobre {
+	main {
+		margin-block: 90px;
+		.row {
+			@include device(xl) {
+				gap: 50px;
+			}
+		}
+		p {
+			font-size: rem(32);
+		}
+	}
+
+	&--section {
+		padding-block: 122px;
+		.container {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			gap: 150px;
+		}
+		&--reverse {
+			background-color: $cinza-claro;
+			.container {
+				grid-template-columns: 1fr auto;
+			}
+		}
+		img {
+			object-fit: cover;
+			object-position: center center;
+			mix-blend-mode: soft-light;
+			max-width: 574px;
+			aspect-ratio: 574 / 506;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			padding-left: 35px;
+			list-style: none;
+		}
+		li {
+			font-size: rem(32);
+			color: $cinza-escuro;
+			position: relative;
+			line-height: math.div(52, 32);
+			&::before {
+				content: '';
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				position: absolute;
+				left: -35px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $azul;
+			}
+		}
+		p {
+			font-size: rem(32);
+			&:nth-of-type(1) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&--content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

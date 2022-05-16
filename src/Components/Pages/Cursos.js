@@ -1,7 +1,12 @@
 import React from 'react';
+import PageBanner from '../PageBanner';
 
 const Cursos = () => {
-	return <div>Cursos</div>;
+	return (
+		<div>
+			<PageBanner title="Cursos" />
+		</div>
+	);
 };
 
 export default Cursos;

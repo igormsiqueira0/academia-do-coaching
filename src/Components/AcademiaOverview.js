@@ -10,6 +10,8 @@ const AcademiaOverview = ({ type }) => {
 	const [alunosNum, setAlunosNum] = React.useState(0);
 	const [horasNum, setHorasNum] = React.useState(0);
 
+	const section = React.useRef();
+
 	async function FetchData() {
 		const jsonData = await (await fetch('./overview.json')).json();
 
@@ -17,8 +19,28 @@ const AcademiaOverview = ({ type }) => {
 	}
 
 	React.useEffect(() => {
-		FetchData();
-	}, []);
+		const halfWindow = window.innerHeight * 0.8 + 5;
+		const offset = Math.floor(section.current.offsetTop - halfWindow);
+
+		function fetchOnScroll() {
+			console.log(offset, window.scrollY);
+			if (offset < window.scrollY) {
+				FetchData();
+				window.removeEventListener('scroll', fetchOnScroll);
+			}
+		}
+
+		window.addEventListener('scroll', fetchOnScroll);
+
+		setTimeout(() => {
+			const event = new CustomEvent('scroll', {
+				detail: {
+					scrollTop: 1,
+				},
+			});
+			window.dispatchEvent(event);
+		});
+	}, [section]);
 
 	React.useEffect(() => {
 		if (data) {
@@ -30,7 +52,7 @@ const AcademiaOverview = ({ type }) => {
 					clearInterval(cursoInterval);
 					return state + Math.round(data[0].quantidade / 100);
 				});
-			}, 25 * Math.random());
+			}, 50 * Math.random());
 		}
 	}, [data, cursoNum]);
 
@@ -44,7 +66,7 @@ const AcademiaOverview = ({ type }) => {
 					clearInterval(alunosInterval);
 					return state + Math.round(data[1].quantidade / 100);
 				});
-			}, 25 * Math.random());
+			}, 50 * Math.random());
 		}
 	}, [data, alunosNum]);
 
@@ -58,55 +80,54 @@ const AcademiaOverview = ({ type }) => {
 					clearInterval(horasInterval);
 					return state + Math.round(data[2].quantidade / 100);
 				});
-			}, 25 * Math.random());
+			}, 50 * Math.random());
 		}
 	}, [data, horasNum]);
 
-	if (data)
-		return (
-			<section className={`overview type-${type}`}>
-				<Container>
-					<div
-						className={`d-flex flex-lg-row flex-column justify-content-between align-items-center ${
-							type === 1 ? 'gap-5' : 'gap-3'
-						}`}
-					>
-						<div className="overview--item">
-							<Cursos />
-							<p>
-								{cursoNum === data[0].quantidade
-									? `+ de ${cursoNum}`
-									: `${cursoNum}`}
-								{type === 1 ? <br /> : ' '}
-								{data[0].nome}
-							</p>
-						</div>
-						<span></span>
-						<div className={`overview--item type-${type}`}>
-							<Alunos />
-							<p>
-								{alunosNum === data[1].quantidade
-									? `+ de ${alunosNum}`
-									: `${alunosNum}`}
-								{type === 1 ? <br /> : ' '}
-								{data[1].nome}
-							</p>
-						</div>
-						<span></span>
-						<div className={`overview--item type-${type}`}>
-							<Horas />
-							<p>
-								{horasNum === data[2].quantidade
-									? `+ de ${horasNum}`
-									: `${horasNum}`}
-								{type === 1 ? <br /> : ' '}
-								{data[2].nome}
-							</p>
-						</div>
+	return (
+		<section className={`overview type-${type}`} ref={section}>
+			<Container>
+				<div
+					className={`d-flex flex-lg-row flex-column justify-content-between align-items-center ${
+						type === 1 ? 'gap-5' : 'gap-3'
+					}`}
+				>
+					<div className="overview--item">
+						<Cursos />
+						<p>
+							{data && cursoNum === data[0].quantidade
+								? `+ de ${cursoNum}`
+								: `${cursoNum}`}
+							{type === 1 ? <br /> : ' '}
+							cursos ativos
+						</p>
 					</div>
-				</Container>
-			</section>
-		);
+					<span></span>
+					<div className={`overview--item`}>
+						<Alunos />
+						<p>
+							{data && alunosNum === data[1].quantidade
+								? `+ de ${alunosNum}`
+								: `${alunosNum}`}
+							{type === 1 ? <br /> : ' '}
+							alunos inscritos
+						</p>
+					</div>
+					<span></span>
+					<div className={`overview--item`}>
+						<Horas />
+						<p>
+							{data && horasNum === data[2].quantidade
+								? `+ de ${horasNum}`
+								: `${horasNum}`}
+							{type === 1 ? <br /> : ' '}
+							horas de aulas
+						</p>
+					</div>
+				</div>
+			</Container>
+		</section>
+	);
 };
 
 export default AcademiaOverview;

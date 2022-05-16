@@ -5,6 +5,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 100px;
+	min-height: 450px;
 	@include device(lg) {
 		flex-direction: column;
 		gap: 50px;
@@ -85,14 +86,23 @@
 	}
 	img {
 		object-fit: cover;
-		aspect-ratio: 4 / 5;
+		aspect-ratio: 45 / 50;
 		object-position: center center;
 		mix-blend-mode: soft-light;
 		&[alt='SAIBA MAIS'] {
 			object-position: left center;
 		}
 	}
-	.hero-img-wrapper {
-		background-image: linear-gradient(to bottom, #f7c659, $azul);
+	.img-wrapper {
+		animation: fromOpacity 0.3s forwards;
+	}
+
+	@keyframes fromOpacity {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }
