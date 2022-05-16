@@ -1,5 +1,6 @@
 @use 'sass:math';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 $azul: #839eaa;
 $branco: #ffffff;
@@ -7,6 +8,9 @@ $cinza-escuro: #606060;
 $cinza: #bfbfbf;
 $amarelo: #ffd77e;
 $cinza-claro: #f5f5f5;
+
+$font1: 'Raleway', sans-serif;
+$font2: 'Merriweather', serif;
 
 @mixin device($device, $size: 0) {
 	@if $device == xs {
@@ -18,7 +22,7 @@ $cinza-claro: #f5f5f5;
 			@content;
 		}
 	} @else if $device == lg {
-		@media (max-width: 768px) {
+		@media (max-width: 767px) {
 			@content;
 		}
 	} @else if $device == xl {
@@ -52,7 +56,7 @@ $cinza-claro: #f5f5f5;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
+	font-family: $font1;
 }
 
 p,
@@ -61,8 +65,15 @@ h1,
 h2,
 h3 {
 	color: $cinza-escuro;
+	margin: 0;
+	padding: 0;
 }
 
 a {
 	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	display: block;
 }

@@ -7,7 +7,10 @@ import logo from '../assets/logo.png';
 const Footer = () => {
 	return (
 		<footer>
-			<Container className="d-flex justify-content-between">
+			<Container
+				className="d-flex justify-content-between flex-wrap"
+				style={{ gap: '50px' }}
+			>
 				<div>
 					<img
 						src={logo}
@@ -22,6 +25,7 @@ const Footer = () => {
 						<p>(11) 1234-5678</p>
 					</div>
 				</div>
+
 				<div>
 					<h2 className="footer-first-col-item">Academia do Coaching</h2>
 					<nav>
@@ -34,6 +38,7 @@ const Footer = () => {
 						</ul>
 					</nav>
 				</div>
+
 				<div>
 					<h2 className="footer-first-col-item">Redes sociais</h2>
 					<div className="social">

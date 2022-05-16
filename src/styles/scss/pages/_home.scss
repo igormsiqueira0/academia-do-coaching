@@ -1,0 +1,83 @@
+@use 'sass:math';
+
+.hero {
+	margin-block: 100px 150px;
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+	@include device(lg) {
+		flex-direction: column;
+		gap: 50px;
+	}
+	h1 {
+		font-family: $font2;
+		font-size: rem(50);
+		margin-bottom: 25px;
+		line-height: math.div(60, 50);
+	}
+	p {
+		font-size: rem(24);
+		line-height: math.div(44, 24);
+		margin-bottom: 36px;
+	}
+	&--button {
+		padding: 15px 70px;
+		background-color: $azul;
+		color: $branco;
+		font-size: rem(24);
+		display: inline-block;
+		text-align: center;
+		border-radius: 5px;
+	}
+	&--control {
+		margin-block: auto;
+		&--inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			@include device(lg) {
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-around;
+			}
+		}
+		button {
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			background-color: transparent;
+			color: $cinza-escuro;
+			opacity: 0.3;
+			border: 2px solid $cinza-escuro;
+			font-size: rem(24);
+			line-height: 0;
+			padding-bottom: 5px;
+			position: relative;
+			&.active {
+				opacity: 0.5;
+			}
+		}
+		span {
+			height: 30px;
+			width: 1px;
+			background-color: rgba($cinza-escuro, 0.5);
+			@include device(lg) {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	img {
+		object-fit: cover;
+		aspect-ratio: 4 / 5;
+		object-position: center center;
+		mix-blend-mode: soft-light;
+		&[alt='SAIBA MAIS'] {
+			object-position: left center;
+		}
+	}
+	.hero-img-wrapper {
+		background-image: linear-gradient(to bottom, #f7c659, $azul);
+	}
+}
