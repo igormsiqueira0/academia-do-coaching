@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import BtnGroup from '../BtnGroup';
 import imgSobre from '../../assets/sobre.png';
+import AcademiaOverview from '../AcademiaOverview';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -19,6 +20,7 @@ const Home = () => {
 		window.addEventListener('resize', () => {
 			setXxlSize(window.innerWidth);
 		});
+		setXxlSize(window.innerWidth);
 	}, []);
 
 	return (
@@ -43,6 +45,8 @@ const Home = () => {
 					</div>
 				)}
 			</Container>
+
+			<AcademiaOverview type={1} />
 		</div>
 	);
 };

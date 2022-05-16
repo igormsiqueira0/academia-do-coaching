@@ -1,0 +1,14 @@
+[
+	{
+		"nome": "cursos ativos",
+		"quantidade": 250
+	},
+	{
+		"nome": "alunos inscritos",
+		"quantidade": 8000
+	},
+	{
+		"nome": "horas de aulas",
+		"quantidade": 920
+	}
+]

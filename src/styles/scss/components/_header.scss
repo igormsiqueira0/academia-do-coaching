@@ -1,7 +1,7 @@
 .header {
 	.navbar-nav {
 		gap: 60px;
-		@include device(lg) {
+		@include device(xl) {
 			gap: 30px;
 			margin-top: 60px;
 			margin-bottom: 30px;
