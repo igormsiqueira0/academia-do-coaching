@@ -19,11 +19,19 @@
 			display: grid;
 			grid-template-columns: auto 1fr;
 			gap: 150px;
+			@include device(xxl) {
+				grid-template-columns: 1fr;
+				gap: 75px;
+			}
 		}
 		&--reverse {
 			background-color: $cinza-claro;
 			.container {
 				grid-template-columns: 1fr auto;
+				@include device(xxl) {
+					grid-template-columns: 1fr;
+					gap: 75px;
+				}
 			}
 		}
 		img {
@@ -32,6 +40,10 @@
 			mix-blend-mode: soft-light;
 			max-width: 574px;
 			aspect-ratio: 574 / 506;
+			@include device(xxl) {
+				aspect-ratio: auto;
+				max-width: 100%;
+			}
 		}
 		ul {
 			display: flex;

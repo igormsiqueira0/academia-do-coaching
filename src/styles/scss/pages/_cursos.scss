@@ -1,0 +1,65 @@
+.cursos {
+	&--nav {
+		background-color: $cinza-claro;
+		padding-block: 40px;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			justify-content: space-between;
+			align-items: center;
+			list-style: none;
+			padding-block: 0;
+			margin-block: 0;
+		}
+		li {
+			font-size: rem(32);
+			font-family: $font1;
+			color: $cinza-escuro;
+			font-weight: 400;
+			z-index: 1;
+			position: relative;
+			cursor: pointer;
+			&.active {
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					bottom: 6px;
+					height: 13px;
+					width: 100%;
+					background-color: $amarelo;
+				}
+			}
+		}
+	}
+	&--holder {
+		gap: 170px 0;
+		animation: showFromTop 0.3s forwards;
+		padding-block: 100px 170px;
+	}
+	@keyframes showFromTop {
+		from {
+			opacity: 0;
+			transform: translate3d(0, -30px, 0);
+		}
+		to {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	.slide-container {
+		margin-left: 0;
+	}
+	@media screen and (min-width: 1199px) and (max-width: 1235px) {
+		.slide-container button {
+			width: 60px;
+			height: 60px;
+			bottom: -30px;
+			right: -30px;
+		}
+	}
+	.slide-img-wrapper img {
+		mix-blend-mode: multiply;
+	}
+}

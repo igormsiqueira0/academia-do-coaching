@@ -5,7 +5,7 @@ import HomeNav from '../HomeNav';
 import imgSobre from '../../assets/sobre.png';
 import AcademiaOverview from '../AcademiaOverview';
 import Title from '../Title';
-import SlideCursos from '../Slides/SlideCursos';
+import CarouselCursos from '../Slides/CarouselCursos';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -33,16 +33,16 @@ const Home = () => {
 			content.classList.remove('hero--content');
 			setTimeout(() => {
 				content.classList.add('hero--content');
-			});
+			}, 5);
 		}
 
 		if (image) {
 			image.classList.remove('img-wrapper');
 			setTimeout(() => {
 				image.classList.add('img-wrapper');
-			});
+			}, 5);
 		}
-	}, [heroSlide]);
+	}, [heroSlide.btnText]);
 
 	return (
 		<div>
@@ -75,11 +75,11 @@ const Home = () => {
 
 			<AcademiaOverview type={1} />
 
-			<section className="home--section">
+			<section className="home--section cursos-section">
 				<Container>
 					<Title content="Cursos" />
 
-					<SlideCursos />
+					<CarouselCursos />
 				</Container>
 			</section>
 

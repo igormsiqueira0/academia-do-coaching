@@ -1,7 +1,7 @@
 @import '~slick-carousel/slick/slick.css';
 
 .slick-slide {
-	height: 315px;
+	height: 400px;
 }
 
 .slick-current {
@@ -28,6 +28,10 @@
 	}
 	@include device(custom, 1199px) {
 		width: calc(100% - 40px);
+	}
+	@include device(custom, 500px) {
+		flex-direction: column;
+		height: 333px;
 	}
 
 	button {
@@ -90,10 +94,16 @@
 		font-weight: 400;
 		margin-bottom: 40px;
 		display: inline-block;
+		@include device(custom, 500px) {
+			margin-bottom: 20px;
+		}
 	}
 	h2 {
 		font-size: rem(32);
 		font-weight: 400;
+		@include device(custom, 500px) {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -102,11 +112,28 @@
 	border-bottom-left-radius: 35px;
 	overflow: hidden;
 	width: 170px;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(#f7c659, 0.3),
+		rgba($azul, 0.3)
+	);
+	@include device(custom, 500px) {
+		width: 100%;
+		height: 300px;
+		border-radius: 0;
+		border-top-left-radius: 35px;
+		border-top-right-radius: 35px;
+	}
+
 	img {
 		height: 100%;
 		width: 170px;
 		object-fit: cover;
 		object-position: center center;
+		mix-blend-mode: soft-light;
+		@include device(custom, 500px) {
+			width: 150%;
+		}
 	}
 }
 
