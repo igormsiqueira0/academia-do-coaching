@@ -34,7 +34,7 @@ $font2: 'Merriweather', serif;
 			@content;
 		}
 	} @else if $device == custom {
-		@media (min-width: $size) {
+		@media (max-width: $size) {
 			@content;
 		}
 	}
@@ -44,8 +44,8 @@ $font2: 'Merriweather', serif;
 	@return math.div($px, 16) + rem;
 }
 
-.container {
-	@include device(custom, 1500px) {
+@media (min-width: 1500px) {
+	.container {
 		max-width: calc(1400px + 24px);
 	}
 }

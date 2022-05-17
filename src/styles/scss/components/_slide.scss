@@ -4,6 +4,12 @@
 	height: 315px;
 }
 
+.slick-current {
+	.slide-container {
+		margin-left: 0;
+	}
+}
+
 .slide-container {
 	border-radius: 20px;
 	box-shadow: 0px 15px 35px #bfbfbf40;
@@ -12,7 +18,18 @@
 	display: flex;
 	position: relative;
 	margin-left: 86px;
+	transition: 0.2s;
 	cursor: pointer;
+	@include device(custom, 1499px) {
+		margin-left: 34px;
+	}
+	@include device(custom, 1399px) {
+		width: 484px;
+	}
+	@include device(custom, 1199px) {
+		width: calc(100% - 40px);
+	}
+
 	button {
 		background-color: $azul;
 		border: none;
@@ -47,10 +64,25 @@
 	}
 }
 
+.slide-previous {
+	margin-left: 0;
+	margin-right: 86px;
+}
+
 .slide-content {
 	margin-top: 40px;
 	margin-left: 40px;
 	max-width: 340px;
+	@include device(custom, 1399px) {
+		padding-right: 5px;
+	}
+	@include device(custom, 1199px) {
+		max-width: 100%;
+	}
+	@include device(sm) {
+		margin-top: 20px;
+		margin-left: 20px;
+	}
 	span {
 		color: $cinza;
 		text-transform: uppercase;
