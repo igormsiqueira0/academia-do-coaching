@@ -5,7 +5,7 @@ import imgSobre from '../assets/sobre.png';
 import imgCursos from '../assets/sobre.png';
 import imgBlog from '../assets/sobre.png';
 
-const BtnGroup = ({ setHeroSlide, ...rest }) => {
+const HomeNav = ({ setHeroSlide, ...rest }) => {
 	const SLIDE_1_CONTENT = {
 			title:
 				'A maior plataforma de cursos na área de Coaching do Brasil não para de crescer.',
@@ -78,4 +78,4 @@ const BtnGroup = ({ setHeroSlide, ...rest }) => {
 	);
 };
 
-export default BtnGroup;
+export default HomeNav;

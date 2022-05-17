@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import BtnGroup from '../BtnGroup';
+import HomeNav from '../HomeNav';
 import imgSobre from '../../assets/sobre.png';
 import AcademiaOverview from '../AcademiaOverview';
+import Title from '../Title';
+import SlideCursos from '../Slides/SlideCursos';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -44,28 +46,54 @@ const Home = () => {
 
 	return (
 		<div>
-			<Container className="hero">
-				<BtnGroup
-					setHeroSlide={setHeroSlide}
-					className="hero--control my-auto"
-				/>
+			<main>
+				<Container className="hero">
+					<HomeNav
+						setHeroSlide={setHeroSlide}
+						className="hero--control my-auto"
+					/>
 
-				<div className="hero--content my-auto">
-					<h1>{heroSlide.title}</h1>
-					<p>{heroSlide.text}</p>
-					<NavLink to={heroSlide.btnHref} className="hero--button">
-						{heroSlide.btnText}
-					</NavLink>
-				</div>
-
-				{xxlSize >= 1200 && (
-					<div className="img-wrapper my-auto">
-						<img src={heroSlide.img && heroSlide.img} alt={heroSlide.btnText} />
+					<div className="hero--content my-auto">
+						<h1 aria-live="polite">{heroSlide.title}</h1>
+						<p aria-live="polite">{heroSlide.text}</p>
+						<NavLink to={heroSlide.btnHref} className="hero--button">
+							{heroSlide.btnText}
+						</NavLink>
 					</div>
-				)}
-			</Container>
+
+					{xxlSize >= 1200 && (
+						<div className="img-wrapper my-auto">
+							<img
+								src={heroSlide.img && heroSlide.img}
+								alt={heroSlide.btnText}
+								aria-live="polite"
+							/>
+						</div>
+					)}
+				</Container>
+			</main>
 
 			<AcademiaOverview type={1} />
+
+			<section className="home--section">
+				<Container>
+					<Title content="Cursos" />
+
+					<SlideCursos />
+				</Container>
+			</section>
+
+			<section className="home--section">
+				<Container>
+					<Title content="Depoimentos" />
+				</Container>
+			</section>
+
+			<section className="home--section">
+				<Container>
+					<Title content="Últimas postagens" span="BLOG" />
+				</Container>
+			</section>
 		</div>
 	);
 };

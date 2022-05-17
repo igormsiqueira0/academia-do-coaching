@@ -23,7 +23,6 @@ const AcademiaOverview = ({ type }) => {
 		const offset = Math.floor(section.current.offsetTop - halfWindow);
 
 		function fetchOnScroll() {
-			console.log(offset, window.scrollY);
 			if (offset < window.scrollY) {
 				FetchData();
 				window.removeEventListener('scroll', fetchOnScroll);

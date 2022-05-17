@@ -1,0 +1,143 @@
+@import '~slick-carousel/slick/slick.css';
+
+.slick-slide {
+	height: 315px;
+}
+
+.slide-container {
+	border-radius: 20px;
+	box-shadow: 0px 15px 35px #bfbfbf40;
+	width: 574px;
+	height: 270px;
+	display: flex;
+	position: relative;
+	margin-left: 86px;
+	cursor: pointer;
+	button {
+		background-color: $azul;
+		border: none;
+		border-radius: 50%;
+		height: 80px;
+		width: 80px;
+		position: absolute;
+		bottom: -40px;
+		right: -40px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 0px;
+			left: 50%;
+			border: 2px solid $branco;
+			background-color: $branco;
+			border-radius: 5px;
+			transform: translate(-50%, -10px) rotate(35deg);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 0px;
+			left: 50%;
+			border: 2px solid $branco;
+			background-color: $branco;
+			border-radius: 5px;
+			transform: translate(-50%, 6px) rotate(-35deg);
+		}
+	}
+}
+
+.slide-content {
+	margin-top: 40px;
+	margin-left: 40px;
+	max-width: 340px;
+	span {
+		color: $cinza;
+		text-transform: uppercase;
+		font-size: rem(16);
+		font-weight: 400;
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+	h2 {
+		font-size: rem(32);
+		font-weight: 400;
+	}
+}
+
+.slide-img-wrapper {
+	border-top-left-radius: 35px;
+	border-bottom-left-radius: 35px;
+	overflow: hidden;
+	width: 170px;
+	img {
+		height: 100%;
+		width: 170px;
+		object-fit: cover;
+		object-position: center center;
+	}
+}
+
+// setas -----------------------
+
+.slick-arrow {
+	position: absolute;
+	top: -100px;
+	background: transparent;
+	border: none;
+	width: 30px;
+	height: 30px;
+}
+
+.slick-prev {
+	right: 50px;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 0px;
+		border: 2px solid $cinza;
+		background-color: $cinza;
+		border-radius: 5px;
+		transform: translate(-50%, -10px) rotate(145deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 0px;
+		border: 2px solid $cinza;
+		background-color: $cinza;
+		border-radius: 5px;
+		transform: translate(-50%, 6px) rotate(-145deg);
+	}
+}
+
+.slick-next {
+	right: 0;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 0px;
+		border: 2px solid $cinza;
+		background-color: $cinza;
+		border-radius: 5px;
+		transform: translate(-50%, -10px) rotate(35deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 0px;
+		border: 2px solid $cinza;
+		background-color: $cinza;
+		border-radius: 5px;
+		transform: translate(-50%, 6px) rotate(-35deg);
+	}
+}
+
+.slick-disabled {
+	opacity: 0.5;
+	cursor: no-drop !important;
+}

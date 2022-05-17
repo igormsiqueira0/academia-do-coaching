@@ -82,6 +82,17 @@ img {
 	background-image: linear-gradient(to bottom, #f7c659, $azul);
 }
 
+.main-title-holder {
+	position: relative;
+	span {
+		position: absolute;
+		top: -35px;
+		font-size: rem(16);
+		color: $cinza-escuro;
+		font-weight: 500;
+	}
+}
+
 .main-title {
 	font-family: $font2;
 	color: $cinza-escuro;

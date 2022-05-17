@@ -106,3 +106,12 @@
 		}
 	}
 }
+
+.home {
+	&--section {
+		padding-block: 100px;
+		&:nth-of-type(odd) {
+			background-color: $cinza-claro;
+		}
+	}
+}
