@@ -1,0 +1,42 @@
+[
+	{
+		"curso": "Como falar em público com maestria",
+		"categoria": "Oratória",
+		"imagem": "https://i.imgur.com/5oR50Ao.png"
+	},
+	{
+		"curso": "Técnicas de percepção de valor",
+		"categoria": "Vendas",
+		"imagem": "https://i.imgur.com/1vLn7P2.png"
+	},
+	{
+		"curso": "Comunicação positiva",
+		"categoria": "Oratória",
+		"imagem": "https://i.imgur.com/Quz2Zay.png"
+	},
+	{
+		"curso": "Apresentação eficaz de ideias",
+		"categoria": "Oratória",
+		"imagem": "https://i.imgur.com/TaJXGe2.png"
+	},
+	{
+		"curso": "Terceiros atuando em sua carreira",
+		"categoria": "Carreira",
+		"imagem": "https://i.imgur.com/XUaxmQq.jpeg"
+	},
+	{
+		"curso": "Como definir seus objetivos",
+		"categoria": "Motivação",
+		"imagem": "https://i.imgur.com/BAlUn02.jpeg"
+	},
+	{
+		"curso": "Performance para comunicação",
+		"categoria": "Oratória",
+		"imagem": "https://i.imgur.com/VLjeCKL.png"
+	},
+	{
+		"curso": "Técnicas de apresentação",
+		"categoria": "Oratória",
+		"imagem": "https://i.imgur.com/bNSQ5cx.png"
+	}
+]
