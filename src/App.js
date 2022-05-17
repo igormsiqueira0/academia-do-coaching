@@ -16,10 +16,10 @@ import Sobre from './Components/Pages/Sobre';
 function App() {
 	return (
 		<div className="App">
-			<BrowserRouter>
+			<BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
 				<Header />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="" element={<Home />} />
 					<Route path="sobre" element={<Sobre />} />
 					<Route path="cursos" element={<Cursos />} />
 					<Route path="blog" element={<Blog />} />
