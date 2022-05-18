@@ -2,8 +2,8 @@ import React from 'react';
 import { ButtonGroup } from 'react-bootstrap';
 
 import imgSobre from '../assets/sobre.png';
-import imgCursos from '../assets/sobre.png';
-import imgBlog from '../assets/sobre.png';
+import imgCursos from '../assets/cursos.jpg';
+import imgBlog from '../assets/blog.jpg';
 
 const HomeNav = ({ setHeroSlide, ...rest }) => {
 	const SLIDE_1_CONTENT = {
@@ -15,17 +15,16 @@ const HomeNav = ({ setHeroSlide, ...rest }) => {
 			img: imgSobre,
 		},
 		SLIDE_2_CONTENT = {
-			title:
-				'A maior plataforma de cursos na área de Coaching do Brasil não para de crescer.',
-			text: 'Se o seu objetivo é aprender ou se aperfeiçoar, cada vez mais, neste segmento, a Academia do Coaching é a plataforma ideal para o seu desenvolvimento.',
+			title: 'A maior experiência de coaching e psicologia positiva!',
+			text: 'Confira os melhores cursos de coaching que o Brasil tem a oferecer para que você possa evoluir em sua carreira.',
 			btnText: 'VEJA OS CURSOS',
 			btnHref: '/cursos',
 			img: imgCursos,
 		},
 		SLIDE_3_CONTENT = {
 			title:
-				'A maior plataforma de cursos na área de Coaching do Brasil não para de crescer.',
-			text: 'Se o seu objetivo é aprender ou se aperfeiçoar, cada vez mais, neste segmento, a Academia do Coaching é a plataforma ideal para o seu desenvolvimento.',
+				'A grande procura por coaching é a partir da necessidade de desenvolvimento profissional e pessoal.',
+			text: 'Além da troca de inúmeros conhecimentos e vivências, a importância do coaching também pode ser descrita por meio da busca e desenvolvimento de resultados extraordinários, que visam mudar para positivo a engrenagem que dá sentido e foco às pessoas.',
 			btnText: 'EXPLORE MAIS',
 			btnHref: '/blog',
 			img: imgBlog,

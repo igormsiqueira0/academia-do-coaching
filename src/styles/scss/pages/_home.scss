@@ -86,7 +86,8 @@
 	}
 	img {
 		object-fit: cover;
-		aspect-ratio: 45 / 50;
+		width: 450px;
+		height: 500px;
 		object-position: center center;
 		mix-blend-mode: soft-light;
 		&[alt='SAIBA MAIS'] {
