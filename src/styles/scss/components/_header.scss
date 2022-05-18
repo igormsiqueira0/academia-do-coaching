@@ -33,16 +33,15 @@
 				color: $amarelo;
 				border-color: $amarelo;
 				border-radius: 5px;
-				transition: 0.3s;
-				&:hover,
-				&:focus {
-					color: $branco;
-					background-color: $amarelo;
-				}
-				&.active {
-					background-color: $amarelo;
-					color: $branco;
-				}
+				// &:hover,
+				// &:focus {
+				// 	color: $branco;
+				// 	background-color: $amarelo;
+				// }
+				// &.active {
+				// 	background-color: $amarelo;
+				// 	color: $branco;
+				// }
 				&:hover::before {
 					display: none;
 				}
