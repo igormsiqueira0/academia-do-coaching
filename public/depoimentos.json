@@ -1,0 +1,26 @@
+[
+	{
+		"nome": "Lucas Pereira",
+		"profissao": "Diretor da Inovae",
+		"depoimento": "A plataforma me auxiliou em muitos fatores no que tange ao desenvolvimento pessoal e profissional na área de Coaching.",
+		"imagem": "https://i.imgur.com/923aApF.png"
+	},
+	{
+		"nome": "Lívia Sousa",
+		"profissao": "Psicóloga",
+		"depoimento": "Além de me trazer conhecimento para atuar como coach, o curso contribuiu para a minha evolução pessoal.",
+		"imagem": "https://i.imgur.com/PuUsqMs.png"
+	},
+	{
+		"nome": "Renan Gomes",
+		"profissao": "Empresário",
+		"depoimento": "Os cursos são ótimos e me proporcionaram um aprendizado imenso. Posso dizer que a plataforma é muito boa.",
+		"imagem": "https://i.imgur.com/zs71aEs.png"
+	},
+	{
+		"nome": "Carlos Ribeiro",
+		"profissao": "Educador",
+		"depoimento": "Os cursos fizeram de mim algúem que pode passar meu conhecimento para o futuro.",
+		"imagem": "https://i.imgur.com/MWbOkeB.jpeg"
+	}
+]

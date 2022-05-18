@@ -58,7 +58,7 @@ const Cursos = () => {
 
 	if (data)
 		return (
-			<div className="cursos">
+			<main className="cursos">
 				<PageBanner title="Cursos" />
 
 				<nav className="cursos--nav">
@@ -76,7 +76,7 @@ const Cursos = () => {
 					</ul>
 				</nav>
 
-				<Container>
+				<Container style={{ minHeight: '600px' }}>
 					<div className="cursos--holder d-flex justify-content-between flex-wrap">
 						{data
 							.filter(({ categoria }) => categoria === preference)
@@ -90,7 +90,7 @@ const Cursos = () => {
 							))}
 					</div>
 				</Container>
-			</div>
+			</main>
 		);
 };
 

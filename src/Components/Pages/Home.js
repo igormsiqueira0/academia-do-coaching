@@ -6,6 +6,7 @@ import imgSobre from '../../assets/sobre.png';
 import AcademiaOverview from '../AcademiaOverview';
 import Title from '../Title';
 import CarouselCursos from '../Slides/CarouselCursos';
+import CarouselDepoimentos from '../Slides/CarouselDepoimentos';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -75,7 +76,7 @@ const Home = () => {
 
 			<AcademiaOverview type={1} />
 
-			<section className="home--section cursos-section">
+			<section className="home--section cursos-section home--cursos">
 				<Container>
 					<Title content="Cursos" />
 
@@ -83,9 +84,11 @@ const Home = () => {
 				</Container>
 			</section>
 
-			<section className="home--section">
+			<section className="home--section home--depoimentos">
 				<Container>
 					<Title content="Depoimentos" />
+
+					<CarouselDepoimentos />
 				</Container>
 			</section>
 

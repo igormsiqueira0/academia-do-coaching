@@ -66,18 +66,16 @@ const CarouselCursos = () => {
 
 	if (data)
 		return (
-			<>
-				<Slider {...settings}>
-					{data.map(({ curso, categoria, imagem }) => (
-						<SlideCursos
-							key={curso}
-							curso={curso}
-							categoria={categoria}
-							imagem={imagem}
-						/>
-					))}
-				</Slider>
-			</>
+			<Slider {...settings}>
+				{data.map(({ curso, categoria, imagem }) => (
+					<SlideCursos
+						key={curso}
+						curso={curso}
+						categoria={categoria}
+						imagem={imagem}
+					/>
+				))}
+			</Slider>
 		);
 };
 

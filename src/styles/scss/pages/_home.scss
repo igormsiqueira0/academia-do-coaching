@@ -114,8 +114,43 @@
 			background-color: $cinza-claro;
 		}
 	}
-}
-
-.cursos-section {
-	padding-bottom: 50px;
+	&--depoimentos {
+		.slick-list {
+			height: 500px;
+		}
+		.slide-container {
+			transition: all 0.5s;
+			@include device(custom, 1399px) {
+				max-width: 434px;
+			}
+			@include device(custom, 992px) {
+				max-width: calc(100% - 100px);
+				margin-inline: auto !important;
+			}
+		}
+		.first-active .slide-container {
+			margin-left: 0;
+		}
+		.previous-slide .slide-container {
+			margin-right: 126px;
+			margin-left: 0;
+			transition: 0.5s;
+		}
+		.middle-slide .slide-container {
+			margin-left: 63px;
+			@include device(custom, 1399px) {
+				margin-left: 126px;
+				margin-right: 0;
+			}
+			@include device(custom, 1199px) {
+				margin-left: 35px;
+			}
+		}
+		.last-item .slide-container {
+			margin-left: 126px;
+			@include device(custom, 1199px) {
+				margin-left: 35px;
+			}
+		}
+	}
 }
