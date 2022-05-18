@@ -4,7 +4,7 @@ const SlideDepoimentos = ({ nome, profissao, depoimento, imagem }) => {
 	return (
 		<div className="slide-container">
 			<div className="slide-img-wrapper">
-				<img src={imagem} alt={nome} />
+				<img src={imagem} alt={`Foto de um aluno que fez o depoimento`} />
 			</div>
 			<div className="slide-content">
 				<p>{depoimento}</p>

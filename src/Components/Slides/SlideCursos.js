@@ -11,7 +11,7 @@ const SlideCursos = ({ curso, categoria, imagem }) => {
 	return (
 		<div className="slide-container" onClick={handleSlideClick}>
 			<div className="slide-img-wrapper">
-				<img src={imagem} alt={curso} />
+				<img src={imagem} alt={`Foto de uma palestra`} />
 			</div>
 			<div className="slide-content">
 				<span>{categoria}</span>
