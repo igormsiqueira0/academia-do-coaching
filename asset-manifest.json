@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/academia-do-coaching/static/css/main.bd10eb50.css",
-    "main.js": "/academia-do-coaching/static/js/main.cca16986.js",
+    "main.css": "/academia-do-coaching/static/css/main.eb73f9f8.css",
+    "main.js": "/academia-do-coaching/static/js/main.5fad815a.js",
     "static/media/Imagem 9.png": "/academia-do-coaching/static/media/Imagem 9.d45a5bb87e03aec0eb72.png",
     "static/media/sobre.png": "/academia-do-coaching/static/media/sobre.28eb3e8d7bd2af913c98.png",
     "static/media/img.png": "/academia-do-coaching/static/media/img.dbe4e6b67c697fc59d81.png",
@@ -16,11 +16,11 @@
     "static/media/cursos.svg": "/academia-do-coaching/static/media/cursos.bf19771050b3de54a271259a7c0c4a3c.svg",
     "index.html": "/academia-do-coaching/index.html",
     "static/media/004-facebook.svg": "/academia-do-coaching/static/media/004-facebook.756c1fc19abd8bbc5a74ba3586770647.svg",
-    "main.bd10eb50.css.map": "/academia-do-coaching/static/css/main.bd10eb50.css.map",
-    "main.cca16986.js.map": "/academia-do-coaching/static/js/main.cca16986.js.map"
+    "main.eb73f9f8.css.map": "/academia-do-coaching/static/css/main.eb73f9f8.css.map",
+    "main.5fad815a.js.map": "/academia-do-coaching/static/js/main.5fad815a.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd10eb50.css",
-    "static/js/main.cca16986.js"
+    "static/css/main.eb73f9f8.css",
+    "static/js/main.5fad815a.js"
   ]
 }
