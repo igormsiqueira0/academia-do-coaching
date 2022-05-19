@@ -7,7 +7,10 @@
 .cursos {
 	padding-bottom: 50px;
 	.slick-slide {
-		height: 400px;
+		height: 330px;
+		@include device(custom, 500px) {
+			height: 400px;
+		}
 	}
 	.slick-current {
 		.slide-container {
@@ -214,8 +217,13 @@
 		width: 340px;
 		border-radius: 35px;
 		background-color: $branco;
+		cursor: pointer;
 		position: relative;
+		margin-left: 86px;
 		box-shadow: 0px 15px 35px #bfbfbf40;
+		@include device(custom, 1500px) {
+			margin-left: 52px;
+		}
 		.slide-img-wrapper {
 			height: 110px;
 			border-top-left-radius: 35px;
@@ -283,6 +291,40 @@
 			}
 		}
 	}
+	.slick-list {
+		height: 400px;
+	}
+	.first-active .slide-container {
+		margin-left: 0;
+		@include device(xl) {
+			margin: 0 !important;
+			width: calc(100% - 40px);
+		}
+	}
+	.previous-slide .slide-container {
+		margin-right: 86px;
+		margin-left: 0;
+		transition: 0.5s;
+	}
+	.middle-slide .slide-container {
+		margin-left: 43px;
+		@include device(custom, 1500px) {
+			margin-left: 26px;
+		}
+		@include device(custom, 1399px) {
+			margin-left: 178px;
+			margin-right: 0;
+		}
+		@include device(custom, 1199px) {
+			margin-left: 88px;
+		}
+	}
+	.last-item .slide-container {
+		margin-left: 86px;
+		@include device(custom, 1199px) {
+			margin-left: 35px;
+		}
+	}
 }
 
 // setas -----------------------
@@ -294,10 +336,19 @@
 	border: none;
 	width: 30px;
 	height: 30px;
+	@include device(sm) {
+		top: auto;
+		bottom: -50px;
+	}
 }
 
 .slick-prev {
 	right: 50px;
+	@include device(sm) {
+		right: calc(50% + 50px);
+		transform: translate(calc(50% + 20px), 0);
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -322,6 +373,11 @@
 
 .slick-next {
 	right: 0;
+	@include device(sm) {
+		right: 50%;
+		transform: translate(calc(50% + 20px), 0);
+	}
+
 	&::before {
 		content: '';
 		position: absolute;

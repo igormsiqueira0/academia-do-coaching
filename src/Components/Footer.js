@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../assets/logo.png';
+import { ReactComponent as Facebook } from '../assets/004-facebook.svg';
+import { ReactComponent as Instagram } from '../assets/005-instagram.svg';
 
 const Footer = () => {
 	return (
@@ -43,10 +45,10 @@ const Footer = () => {
 					<h2 className="footer-first-col-item">Redes sociais</h2>
 					<div className="social">
 						<a href="https://facebook.com" className="social-item">
-							Facebook
+							<Facebook />
 						</a>
 						<a href="https://instagram.com" className="social-item">
-							Instagram
+							<Instagram />
 						</a>
 					</div>
 				</div>

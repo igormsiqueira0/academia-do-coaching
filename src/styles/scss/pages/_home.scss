@@ -117,7 +117,7 @@
 	}
 	&--depoimentos {
 		.slick-list {
-			height: 500px;
+			height: 550px;
 		}
 		.slide-container {
 			transition: all 0.5s;
@@ -127,6 +127,14 @@
 			@include device(custom, 992px) {
 				max-width: calc(100% - 100px);
 				margin-inline: auto !important;
+			}
+			@include device(custom, 490px) {
+				max-width: 100%;
+				p,
+				h3,
+				span {
+					font-size: 1.25rem;
+				}
 			}
 		}
 		.first-active .slide-container {

@@ -34,10 +34,12 @@ footer {
 		gap: 30px;
 	}
 	.social-item {
-		height: 30px;
-		width: 30px;
 		font-size: 0px;
 		display: block;
-		background-color: $branco;
+		svg {
+			height: 30px;
+			width: 30px;
+			fill: $branco;
+		}
 	}
 }

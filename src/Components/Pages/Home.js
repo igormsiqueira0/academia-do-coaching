@@ -7,6 +7,7 @@ import AcademiaOverview from '../AcademiaOverview';
 import Title from '../Title';
 import CarouselCursos from '../Slides/CarouselCursos';
 import CarouselDepoimentos from '../Slides/CarouselDepoimentos';
+import CarouselBlog from '../Slides/CarouselBlog';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -92,9 +93,11 @@ const Home = () => {
 				</Container>
 			</section>
 
-			<section className="home--section">
+			<section className="home--section home--blog">
 				<Container>
 					<Title content="Últimas postagens" span="BLOG" />
+
+					<CarouselBlog />
 				</Container>
 			</section>
 		</div>

@@ -116,3 +116,9 @@ img {
 		background-color: $amarelo;
 	}
 }
+
+.home--section .main-title {
+	@include device(lg) {
+		font-size: 2.5rem;
+	}
+}
