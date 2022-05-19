@@ -139,13 +139,9 @@
 	.slide-img-wrapper {
 		background-image: linear-gradient(
 			to bottom,
-			rgba(#f7c659, 0.3),
-			rgba($azul, 0.3)
+			rgba(#f7c659, 0.5),
+			rgba($azul, 0.5)
 		);
-
-		img {
-			mix-blend-mode: soft-light;
-		}
 	}
 }
 
