@@ -8,6 +8,7 @@ import Title from '../Title';
 import CarouselCursos from '../Slides/CarouselCursos';
 import CarouselDepoimentos from '../Slides/CarouselDepoimentos';
 import CarouselBlog from '../Slides/CarouselBlog';
+import Head from '../Head';
 
 const Home = () => {
 	const [heroSlide, setHeroSlide] = React.useState({
@@ -47,7 +48,12 @@ const Home = () => {
 	}, [heroSlide.btnText]);
 
 	return (
-		<div>
+		<>
+			<Head
+				title="Home"
+				description="A maior plataforma de cursos na área de Coaching do Brasil não para de crescer."
+			/>
+
 			<main>
 				<Container className="hero">
 					<HomeNav
@@ -100,7 +106,7 @@ const Home = () => {
 					<CarouselBlog />
 				</Container>
 			</section>
-		</div>
+		</>
 	);
 };
 

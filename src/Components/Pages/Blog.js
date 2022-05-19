@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Head from '../Head';
 import PageBanner from '../PageBanner';
 import SlideBlog from '../Slides/SlideBlog';
 
@@ -58,42 +59,48 @@ const Blog = () => {
 
 	if (data)
 		return (
-			<main className="blog">
-				<PageBanner title="Blog" />
+			<>
+				<Head
+					title="Blog"
+					description="Confira o blog feito pelos melhores choaches do Brasil."
+				/>
+				<main className="blog">
+					<PageBanner title="Blog" />
 
-				<nav className="blog--nav">
-					<ul className="container">
-						{[...categories].map((categoria) => (
-							<li
-								key={categoria}
-								className="blog--nav--item"
-								data-role={categoria}
-								onClick={handleNavItemClick}
-							>
-								{categoria}
-							</li>
-						))}
-					</ul>
-				</nav>
-
-				<Container style={{ minHeight: '600px' }}>
-					<div className="blog--holder">
-						{data
-							.filter(({ categoria }) => categoria === preference)
-							.map(({ post, categoria, imagem }) => (
-								<SlideBlog
-									key={post}
-									post={post}
-									categoria={categoria}
-									imagem={imagem}
-								/>
+					<nav className="blog--nav">
+						<ul className="container">
+							{[...categories].map((categoria) => (
+								<li
+									key={categoria}
+									className="blog--nav--item"
+									data-role={categoria}
+									onClick={handleNavItemClick}
+								>
+									{categoria}
+								</li>
 							))}
-						{data.filter(({ categoria }) => categoria === preference).length %
-							3 !==
-							0 && <span style={{ width: '340px' }}></span>}
-					</div>
-				</Container>
-			</main>
+						</ul>
+					</nav>
+
+					<Container style={{ minHeight: '600px' }}>
+						<div className="blog--holder">
+							{data
+								.filter(({ categoria }) => categoria === preference)
+								.map(({ post, categoria, imagem }) => (
+									<SlideBlog
+										key={post}
+										post={post}
+										categoria={categoria}
+										imagem={imagem}
+									/>
+								))}
+							{data.filter(({ categoria }) => categoria === preference).length %
+								3 !==
+								0 && <span style={{ width: '340px' }}></span>}
+						</div>
+					</Container>
+				</main>
+			</>
 		);
 };
 

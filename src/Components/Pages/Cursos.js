@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Head from '../Head';
 import PageBanner from '../PageBanner';
 import SlideCursos from '../Slides/SlideCursos';
 
@@ -58,39 +59,46 @@ const Cursos = () => {
 
 	if (data)
 		return (
-			<main className="cursos">
-				<PageBanner title="Cursos" />
+			<>
+				<Head
+					title="Cursos"
+					description="Confira todos os cursos disponíveis em nossa plataforma."
+				/>
 
-				<nav className="cursos--nav">
-					<ul className="container">
-						{[...categories].map((categoria) => (
-							<li
-								key={categoria}
-								className="cursos--nav--item"
-								data-role={categoria}
-								onClick={handleNavItemClick}
-							>
-								{categoria}
-							</li>
-						))}
-					</ul>
-				</nav>
+				<main className="cursos">
+					<PageBanner title="Cursos" />
 
-				<Container style={{ minHeight: '600px' }}>
-					<div className="cursos--holder d-flex justify-content-between flex-wrap">
-						{data
-							.filter(({ categoria }) => categoria === preference)
-							.map(({ curso, categoria, imagem }) => (
-								<SlideCursos
-									key={curso}
-									curso={curso}
-									categoria={categoria}
-									imagem={imagem}
-								/>
+					<nav className="cursos--nav">
+						<ul className="container">
+							{[...categories].map((categoria) => (
+								<li
+									key={categoria}
+									className="cursos--nav--item"
+									data-role={categoria}
+									onClick={handleNavItemClick}
+								>
+									{categoria}
+								</li>
 							))}
-					</div>
-				</Container>
-			</main>
+						</ul>
+					</nav>
+
+					<Container style={{ minHeight: '600px' }}>
+						<div className="cursos--holder d-flex justify-content-between flex-wrap">
+							{data
+								.filter(({ categoria }) => categoria === preference)
+								.map(({ curso, categoria, imagem }) => (
+									<SlideCursos
+										key={curso}
+										curso={curso}
+										categoria={categoria}
+										imagem={imagem}
+									/>
+								))}
+						</div>
+					</Container>
+				</main>
+			</>
 		);
 };
 
