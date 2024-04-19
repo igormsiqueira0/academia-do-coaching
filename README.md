@@ -1,6 +1,6 @@
 # Site para preencher portfólio para futuros projetos
 
-Projeto realizado com React v18.
+*Utilizando React + SCSS*
 
 Foi usado React-Bootstrap para utilizar algumas classes utilitárias, container e realizar funcionamento do header.
 Também foi usado React Slick para construir os slides da página home.
